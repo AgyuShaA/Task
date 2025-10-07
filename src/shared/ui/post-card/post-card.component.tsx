@@ -1,4 +1,3 @@
-// widgets/post/post-card.component.tsx
 "use client";
 
 import { Card } from "@heroui/react";
@@ -8,7 +7,7 @@ import Button from "@/shared/ui/button/button.component";
 
 interface PostCardProps {
   post: Post;
-  showButton?: boolean; // optionally show the "View Post" button
+  showButton?: boolean;
 }
 
 export default function PostCard({ post, showButton = true }: PostCardProps) {

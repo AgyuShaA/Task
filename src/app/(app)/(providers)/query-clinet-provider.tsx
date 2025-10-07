@@ -1,4 +1,3 @@
-// src/app/(app)/providers/query-client.provider.tsx
 "use client";
 
 import { ReactNode, useState } from "react";

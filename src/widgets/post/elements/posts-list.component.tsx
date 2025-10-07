@@ -1,4 +1,3 @@
-// widgets/posts-list/posts-list.component.tsx
 "use client";
 
 import { Post } from "@/entities/post/model/post.types";
