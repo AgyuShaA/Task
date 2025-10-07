@@ -10,7 +10,11 @@ interface UseGetPostOptions {
 export const useGetPost = ({ id, initialData }: UseGetPostOptions) =>
   useQuery<Post>({
     queryKey: ['post', id],
-    queryFn: () => fetchPost(id),
+    queryFn: () => {
+      console.log('Fetching posts from API... /posts/id?=', id);
+
+      return fetchPost(id);
+    },
     staleTime: 30_000,
     refetchInterval: 30_000,
     initialData,

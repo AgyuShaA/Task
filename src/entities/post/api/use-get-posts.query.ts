@@ -9,7 +9,10 @@ interface UseGetPostsOptions {
 export const useGetPosts = ({ initialData }: UseGetPostsOptions = {}) =>
   useQuery<Post[]>({
     queryKey: ['posts'],
-    queryFn: () => fetchPosts(),
+    queryFn: () => {
+      console.log('Fetching post from server... /posts');
+      return fetchPosts();
+    },
     initialData,
     staleTime: 30_000,
     refetchInterval: 30_000,

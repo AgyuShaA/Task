@@ -1,18 +1,19 @@
-"use client";
+'use client';
 
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { HeroUIProvider } from "@heroui/react";
-import QueryClientProviderWrapper from "../../shared/providers/query-clinet-provider";
+import { Geist, Geist_Mono } from 'next/font/google';
+import './globals.css';
+import { HeroUIProvider } from '@heroui/react';
+import QueryClientProviderWrapper from '../../shared/providers/query-clinet-provider';
+import ReactQueryProvider from '../../shared/providers/query-clinet-provider';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 export default function RootLayout({
@@ -22,12 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <HeroUIProvider>
-          <QueryClientProviderWrapper>{children}</QueryClientProviderWrapper>
-        </HeroUIProvider>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <ReactQueryProvider>
+          <HeroUIProvider>{children}</HeroUIProvider>\
+        </ReactQueryProvider>
       </body>
     </html>
   );
