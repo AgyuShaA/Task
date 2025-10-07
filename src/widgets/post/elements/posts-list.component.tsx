@@ -1,6 +1,6 @@
 "use client";
 
-import { Post } from "@/entities/post/model/post.types";
+import { Post } from "@/entities/post/models/post.types";
 import { PostCard } from "@/shared/ui/post-card";
 
 interface PostsListProps {

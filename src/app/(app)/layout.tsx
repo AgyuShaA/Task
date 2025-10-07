@@ -2,9 +2,8 @@
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
 import { HeroUIProvider } from "@heroui/react";
-import QueryClientProviderWrapper from "./(providers)/query-clinet-provider";
+import QueryClientProviderWrapper from "../../shared/providers/query-clinet-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
