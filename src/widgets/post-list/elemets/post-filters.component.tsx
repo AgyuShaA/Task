@@ -1,27 +1,27 @@
-"use client";
+'use client';
 
-import { Input, Button } from "@heroui/react";
-import usePostsFilterStore from "@/shared/store/posts-filter.store";
-import { useSearchParams, useRouter } from "next/navigation";
+import { usePostsFilterStore } from '@/modules/post';
+import { SortOrder } from '@/modules/post/posts-filter.store';
+import { Input, Button } from '@heroui/react';
+
+import { useSearchParams, useRouter } from 'next/navigation';
 
 export default function PostsFilters() {
   const { sortOrder, setSortOrder } = usePostsFilterStore();
   const searchParams = useSearchParams();
   const router = useRouter();
-  const searchParam = searchParams.get("search") || "";
+  const searchParam = searchParams.get('search') || '';
 
   const handleSearchChange = (value: string) => {
     const params = new URLSearchParams(searchParams.toString());
-    if (value) params.set("search", value);
-    else params.delete("search");
+    if (value) params.set('search', value);
+    else params.delete('search');
     router.replace(`?${params.toString()}`, { scroll: false });
   };
 
   const buttonClass = (order: typeof sortOrder) =>
     `rounded-md px-4 py-1 transition ${
-      sortOrder === order
-        ? "bg-blue-600 text-white"
-        : "bg-gray-100 text-gray-700 hover:bg-blue-200"
+      sortOrder === order ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-blue-200'
     }`;
 
   return (
@@ -36,29 +36,29 @@ export default function PostsFilters() {
       <div className="flex flex-wrap gap-2">
         <Button
           size="sm"
-          onPress={() => setSortOrder("title-asc")}
-          className={buttonClass("title-asc")}
+          onPress={() => setSortOrder(SortOrder.TitleAsc)}
+          className={buttonClass(SortOrder.TitleAsc)}
         >
           A → Z
         </Button>
         <Button
           size="sm"
-          onPress={() => setSortOrder("title-desc")}
-          className={buttonClass("title-desc")}
+          onPress={() => setSortOrder(SortOrder.TitleDesc)}
+          className={buttonClass(SortOrder.TitleDesc)}
         >
           Z → A
         </Button>
         <Button
           size="sm"
-          onPress={() => setSortOrder("id-asc")}
-          className={buttonClass("id-asc")}
+          onPress={() => setSortOrder(SortOrder.IdAsc)}
+          className={buttonClass(SortOrder.IdAsc)}
         >
           Oldest
         </Button>
         <Button
           size="sm"
-          onPress={() => setSortOrder("id-desc")}
-          className={buttonClass("id-desc")}
+          onPress={() => setSortOrder(SortOrder.IdDesc)}
+          className={buttonClass(SortOrder.IdDesc)}
         >
           Newest
         </Button>

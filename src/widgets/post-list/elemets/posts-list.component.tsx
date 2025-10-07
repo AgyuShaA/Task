@@ -1,15 +1,14 @@
-"use client";
+'use client';
 
-import { Post } from "@/entities/post/models/post.types";
-import { PostCard } from "@/shared/ui/post-card";
+import { Post } from '@/entities/post/models/post.types';
+import { PostCard } from '@/shared/ui/post-card';
 
 interface PostsListProps {
   posts: Post[];
 }
 
 export default function PostsList({ posts }: PostsListProps) {
-  if (!posts.length)
-    return <p className="text-center text-gray-500">No posts found.</p>;
+  if (!posts.length) return <p className="text-center text-gray-500">No posts found.</p>;
 
   return (
     <div className="space-y-6 max-w-3xl mx-auto">

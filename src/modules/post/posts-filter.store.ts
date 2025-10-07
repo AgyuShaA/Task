@@ -1,10 +1,10 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
 export enum SortOrder {
-  TitleAsc = "title-asc",
-  TitleDesc = "title-desc",
-  IdAsc = "id-asc",
-  IdDesc = "id-desc",
+  TitleAsc = 'title-asc',
+  TitleDesc = 'title-desc',
+  IdAsc = 'id-asc',
+  IdDesc = 'id-desc',
 }
 
 interface PostsFilterState {

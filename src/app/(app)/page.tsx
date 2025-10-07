@@ -1,11 +1,15 @@
-import { PostsListContainer } from "@/widgets/post/elements";
+import { fetchPosts } from '@/entities/post/api';
+import { PostsListContainer } from '@/widgets/post-list/elemets';
+import { Suspense } from 'react';
 
 export const revalidate = 30;
 
-export default function Home() {
+export default async function Home() {
+  const posts = await fetchPosts();
+
   return (
-    <div className="font-sans  items-center justify-items-center p-8 pb-20 gap-16 ">
-      <PostsListContainer />
-    </div>
+    <Suspense fallback={<p>Loading posts...</p>}>
+      <PostsListContainer posts={posts} />
+    </Suspense>
   );
 }
