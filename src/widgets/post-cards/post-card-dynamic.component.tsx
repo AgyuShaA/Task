@@ -1,0 +1,31 @@
+'use client';
+
+import { Card } from '@heroui/react';
+import { Post } from '@/entities/post/models/post.types';
+import Link from 'next/link';
+import Button from '@/shared/ui/button/button.component';
+import { useGetPost } from '@/entities/post/api';
+
+interface PostCardProps {
+  initialPost: Post;
+  showButton?: boolean;
+}
+
+export default function PostCardDynamic({ initialPost, showButton = true }: PostCardProps) {
+  const { data } = useGetPost({ id: initialPost.id.toString(), initialData: initialPost });
+  const currentPost = data ?? initialPost;
+
+  return (
+    <Card className="p-6 flex flex-col items-center gap-4 border border-gray-200 shadow-sm rounded-lg">
+      <h2 className="text-xl font-bold text-center">{currentPost.title}</h2>
+      <p className="text-center text-gray-700">{currentPost.body}</p>
+      {showButton && (
+        <Link href={`/${currentPost.id}`}>
+          <Button size="sm" variant="primary">
+            View Post
+          </Button>
+        </Link>
+      )}
+    </Card>
+  );
+}

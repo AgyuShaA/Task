@@ -1,23 +1,27 @@
-"use client";
+import Link from 'next/link';
 
-import { useGetPost } from "@/entities/post/api/use-get-post.api";
-import { useParams } from "next/navigation";
-import Link from "next/link";
-import Button from "@/shared/ui/button";
-import { PostCard } from "@/shared/ui/post-card";
+import Button from '@/shared/ui/button';
+import { fetchPost } from '@/entities/post/api';
+import { PostCardDynamic } from '@/widgets/post-cards';
 
-export default function PostPage() {
-  const params = useParams();
-  const id = params?.id;
+export const revalidate = 30;
 
-  const { data: post, isLoading, error } = useGetPost(Number(id));
+export async function generateStaticParams() {
+  return Array.from({ length: 100 }, (_, i) => ({ id: (i + 1).toString() }));
+}
 
-  if (isLoading) return <p>Loading...</p>;
-  if (error || !post) return <p>Error loading post</p>;
+interface PostPageProps {
+  params: { id: string };
+}
+
+export default async function PostPage({ params }: PostPageProps) {
+  const awaitedParams = await params;
+  const { id } = awaitedParams;
+  const post = await fetchPost(id);
 
   return (
     <div className="p-4 max-w-2xl mx-auto space-y-4">
-      <PostCard post={post} showButton={false} />
+      <PostCardDynamic initialPost={post} showButton={false} />
 
       <div className="flex items-center w-full justify-center">
         <Link href="/">
