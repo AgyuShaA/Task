@@ -4,22 +4,10 @@ import { usePostsFilterStore } from '@/modules/post';
 import { SortOrder } from '@/modules/post/posts-filter.store';
 import { Input, Button } from '@heroui/react';
 
-import { useSearchParams, useRouter } from 'next/navigation';
-
 export default function PostsFilters() {
-  const { sortOrder, setSortOrder } = usePostsFilterStore();
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const searchParam = searchParams.get('search') || '';
+  const { search, setSearch, sortOrder, setSortOrder } = usePostsFilterStore();
 
-  const handleSearchChange = (value: string) => {
-    const params = new URLSearchParams(searchParams.toString());
-    if (value) params.set('search', value);
-    else params.delete('search');
-    router.replace(`?${params.toString()}`, { scroll: false });
-  };
-
-  const buttonClass = (order: typeof sortOrder) =>
+  const buttonClass = (order: SortOrder) =>
     `rounded-md px-4 py-1 transition ${
       sortOrder === order ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-blue-200'
     }`;
@@ -28,9 +16,9 @@ export default function PostsFilters() {
     <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6 mb-6">
       <Input
         placeholder="Search posts..."
-        defaultValue={searchParam}
-        onChange={(e) => handleSearchChange(e.target.value)}
-        className="mb-3 sm:mb-0 sm:flex-1 border p-2 border-gray-300  rounded-lg shadow-sm transition"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        className="mb-3 sm:mb-0 sm:flex-1 border p-2 border-gray-300 rounded-lg shadow-sm transition w-full"
       />
 
       <div className="flex flex-wrap gap-2">
