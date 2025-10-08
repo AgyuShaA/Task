@@ -1,6 +1,5 @@
 import { create } from 'zustand';
 import { Post } from '@/entities/post/models/post.model';
-import { useGetPosts } from '@/entities/post/api';
 
 export enum SortOrder {
   TitleAsc = 'title-asc',
@@ -27,8 +26,7 @@ const usePostsFilterStore = create<PostsFilterState>((set, get) => ({
   sortOrder: SortOrder.TitleAsc,
 
   applyFilters: () => {
-    const { search, sortOrder } = get();
-    const { data: posts = [] } = useGetPosts();
+    const { posts, search, sortOrder } = get();
 
     let result = [...posts];
 

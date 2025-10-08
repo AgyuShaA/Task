@@ -11,9 +11,13 @@ interface PostsListProps {
 }
 
 export default function PostsList({ posts }: PostsListProps) {
-  const { isLoading, isError } = useGetPosts({ initialData: posts });
+  const { data: postsData = posts, isLoading, isError } = useGetPosts({ initialData: posts });
 
-  const { filteredPosts } = usePostsFilterStore();
+  const { filteredPosts, setPosts } = usePostsFilterStore();
+
+  useEffect(() => {
+    if (postsData) setPosts(postsData);
+  }, [postsData, setPosts]);
 
   if (isLoading) return <p>Loading posts...</p>;
   if (isError) return <p>Error loading posts</p>;
