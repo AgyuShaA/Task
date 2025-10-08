@@ -3,13 +3,13 @@
 import { useGetPosts } from '@/entities/post/api';
 import { Post } from '@/entities/post/models/post.model';
 import { usePostsFilterStore } from '@/modules/post';
+import { SortOrder } from '@/modules/post/posts-filter.store';
 import { PostCard } from '@/shared/ui/post-card';
 import { useEffect } from 'react';
 
 interface PostsListProps {
   posts: Post[];
 }
-('use client');
 
 export default function PostsList({ posts }: PostsListProps) {
   const { data: postsData = posts, isLoading, isError } = useGetPosts({ initialData: posts });
@@ -33,7 +33,10 @@ export default function PostsList({ posts }: PostsListProps) {
         className="border p-2 rounded w-full"
       />
 
-      <select onChange={(e) => setSortOrder(e.target.value as any)} className="border p-2 rounded">
+      <select
+        onChange={(e) => setSortOrder(e.target.value as SortOrder)}
+        className="border p-2 rounded"
+      >
         <option value="title-asc">Title ↑</option>
         <option value="title-desc">Title ↓</option>
         <option value="id-asc">ID ↑</option>
