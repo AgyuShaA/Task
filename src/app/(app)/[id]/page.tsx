@@ -1,6 +1,6 @@
 import { fetchPost } from '@/entities/post/api';
 import { QueryClient, dehydrate, HydrationBoundary } from '@tanstack/react-query';
-import PostCardDynamic from '@/widgets/post-cards/post-card-dynamic.component';
+import PostCardDynamic from '@/widgets/post-cards/elemets/post-card-dynamic.component';
 import Link from 'next/link';
 import Button from '@/shared/ui/button';
 

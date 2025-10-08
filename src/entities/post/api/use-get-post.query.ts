@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { Post } from '../models/post.types';
+import { Post } from '../models/post.model';
 import { fetchPost } from './get-post.api';
 
 interface UseGetPostOptions {

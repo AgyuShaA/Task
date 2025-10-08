@@ -1,4 +1,4 @@
-import { Post } from '../models/post.types';
+import { Post } from '../models/post.model';
 
 export const fetchPosts = async () => {
   console.log('Fetching posts from API... /posts');

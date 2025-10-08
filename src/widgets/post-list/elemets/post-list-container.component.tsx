@@ -1,6 +1,6 @@
 import PostsFilters from './post-filters.component';
 import PostsList from './posts-list.component';
-import { Post } from '@/entities/post/models/post.types';
+import { Post } from '@/entities/post/models/post.model';
 
 interface PostsListContainerProps {
   posts?: Post[];

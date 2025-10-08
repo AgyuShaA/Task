@@ -1,7 +1,7 @@
 'use client';
 
 import { Card } from '@heroui/react';
-import { Post } from '@/entities/post/models/post.types';
+import { Post } from '@/entities/post/models/post.model';
 import Link from 'next/link';
 import Button from '@/shared/ui/button/button.component';
 
