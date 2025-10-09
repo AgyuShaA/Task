@@ -1,6 +1,7 @@
 import '@/config/styles/globals.css'
-import RestApiProvider from '../../pkg/libraries/rest-api/rest-api.provider'
+
 import { UiProvider } from '../../pkg/libraries/ui'
+import RestApiProvider from '@/pkg/libraries/rest-api/rest-api.provider'
 
 export default function RootLayout({
   children,

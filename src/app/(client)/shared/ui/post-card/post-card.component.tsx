@@ -1,9 +1,10 @@
 'use client'
 
 import { Card } from '@heroui/react'
-import { Post } from '@/app/(client)/entities/models/post.model'
+
 import Link from 'next/link'
 import Button from '../button'
+import { Post } from '@/app/(client)/entities/models'
 
 interface PostCardProps {
   post: Post

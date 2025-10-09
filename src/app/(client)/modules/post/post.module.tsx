@@ -1,6 +1,6 @@
 import { type FC } from 'react'
 import { ContainerComponent } from '../../shared/ui/container'
-import PostIdComponent from '../../widgets/post-id/post-component.component'
+import { PostIdComponent } from '../../widgets/post-id'
 
 interface HomeModuleProps {
   id: string

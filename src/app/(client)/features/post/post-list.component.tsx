@@ -3,9 +3,10 @@
 import { Post } from '@/app/(client)/entities/models/post.model'
 import { PostCard } from '@/app/(client)/shared/ui/post-card'
 import { useEffect } from 'react'
-import usePostsFilterStore from '../../shared/store/posts-filter.store'
+
 import { useQuery } from '@tanstack/react-query'
 import { postQueryOptions } from '../../entities/api/post'
+import { usePostsFilterStore } from '../../shared/store'
 
 export default function PostList() {
   const { data: postsData, isLoading, isError } = useQuery(postQueryOptions())
