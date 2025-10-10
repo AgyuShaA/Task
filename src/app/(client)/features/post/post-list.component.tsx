@@ -21,6 +21,7 @@ export default function PostList() {
 
   useEffect(() => {
     if (postsData) setPosts(postsData)
+    throw new Error('Test error for Sentry')
   }, [postsData, setPosts])
 
   if (isLoading) return <p>Loading posts...</p>
