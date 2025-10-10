@@ -2,8 +2,7 @@ import '@/config/styles/globals.css'
 
 import { UiProvider } from '../../pkg/libraries/ui'
 import RestApiProvider from '@/pkg/libraries/rest-api/rest-api.provider'
-
-import ClientAnalytics from '@/pkg/integrations/mixpanel/mixpanel-client'
+import { MixpanelPlrovider } from '@/pkg/integrations/mixpanel/mixpanel'
 
 export default function RootLayout({
   children,
@@ -14,10 +13,9 @@ export default function RootLayout({
     <html lang='en' className='light' style={{ colorScheme: 'light' }}>
       <body className='antialiased' suppressHydrationWarning>
         <UiProvider>
-          <RestApiProvider>
-            {children}
-            <ClientAnalytics event='Page Viewed' properties={{ page: 'Home' }} />
-          </RestApiProvider>
+          <MixpanelPlrovider>
+            <RestApiProvider>{children}</RestApiProvider>
+          </MixpanelPlrovider>
         </UiProvider>
       </body>
     </html>

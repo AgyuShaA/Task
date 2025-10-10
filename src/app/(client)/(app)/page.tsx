@@ -4,6 +4,8 @@ import { HomeModule } from '../modules/home'
 import { postQueryOptions } from '@/client/entities/api/post'
 import { getQueryClient } from '@/pkg/libraries/rest-api/service'
 
+import { getServerGrowthBook } from '@/pkg/integrations/growthbook/server'
+
 export const revalidate = 30
 export const dynamic = 'force-static'
 
@@ -11,11 +13,15 @@ export default async function Home() {
   const queryClient = getQueryClient()
   await queryClient.prefetchQuery(postQueryOptions())
 
+  const gb = await getServerGrowthBook()
+  const featureEnabled = gb.isOn('my-feature')
+  console.log('featureEnabled', featureEnabled) //true
+
   const dehydratedState = dehydrate(queryClient)
+
   return (
     <HydrationBoundary state={dehydratedState}>
       <Suspense fallback={<p>Loading posts...</p>}>
-        {/* You can pass experiment info to your module */}
         <HomeModule />
       </Suspense>
     </HydrationBoundary>

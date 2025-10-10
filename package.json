@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@flags-sdk/growthbook": "^0.1.0",
+    "@growthbook/growthbook": "^1.6.1",
     "@growthbook/growthbook-react": "^1.6.1",
     "@heroui/react": "^2.8.5",
     "@sentry/nextjs": "^10.19.0",

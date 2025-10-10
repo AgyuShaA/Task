@@ -6,8 +6,7 @@ const nextConfig = {
 module.exports = withSentryConfig(nextConfig, {
   org: 'ruby-labs-ov',
   project: 'javascript-nextjs',
-  // Only print logs for uploading source maps in CI
-  // Set to `true` to suppress logs
+
   silent: !process.env.CI,
   // Automatically tree-shake Sentry logger statements to reduce bundle size
   disableLogger: true,

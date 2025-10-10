@@ -6,7 +6,6 @@ import { useEffect } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { postQueryOptions } from '../../entities/api/post'
 import { usePostsFilterStore } from '../../shared/store'
-import { initMixpanel } from '@/pkg/integrations/mixpanel/mixpanel'
 
 export default function PostList() {
   const { data: postsData, isLoading, isError } = useQuery(postQueryOptions())
@@ -14,14 +13,7 @@ export default function PostList() {
   const { filteredPosts, setPosts } = usePostsFilterStore()
 
   useEffect(() => {
-    const mp = initMixpanel()
-    mp.track('PostList_Viewed', { filteredCount: filteredPosts.length })
-    console.log('Tracked PostList_Viewed event', mp.get_distinct_id())
-  }, [filteredPosts])
-
-  useEffect(() => {
     if (postsData) setPosts(postsData)
-    throw new Error('Test error for Sentry')
   }, [postsData, setPosts])
 
   if (isLoading) return <p>Loading posts...</p>
