@@ -12,21 +12,20 @@ import PayPalIcon from '../../icons/footer/paypal-icon'
 import ApplePayIcon from '../../icons/footer/apple-pay-icon'
 import VisaIcon from '../../icons/footer/visa-icon'
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import { routing } from '@/i18n/routing'
 import { useState, useRef } from 'react'
 
 export const Footer = () => {
   const t = useTranslations('Footer')
-  const pathname = usePathname()
+
   const locales = routing.locales
   const router = useRouter()
   const [open, setOpen] = useState(false)
   const dropdownRef = useRef<HTMLUListElement>(null)
 
   const handleLocaleChange = (loc: 'en' | 'uk') => {
-    // build path with locale
-    router.push(`/${loc}${pathname}`)
+    router.push(`/${loc}`)
   }
 
   return (
