@@ -14,16 +14,11 @@ const ContainerComponent: FC<Readonly<IProps>> = (props) => {
   return (
     <>
       {variant === 'main' ? (
-        <main
-          className={cn(
-            `mx-auto flex min-h-[calc(100vh-60px)] w-full max-w-screen-lg flex-col gap-6 px-4 pt-4 pb-8 md:px-6`,
-            className,
-          )}
-        >
+        <main className={cn(`mx-auto w-full max-w-7xl pt-16 max-[1320px]:px-6 max-md:px-4`, className)}>
           {children}
         </main>
       ) : (
-        <div className={cn(`mx-auto flex w-full max-w-screen-lg flex-col gap-4`, className)}>{children}</div>
+        <div className={cn(`mx-auto flex w-full flex-col gap-4`, className)}>{children}</div>
       )}
     </>
   )

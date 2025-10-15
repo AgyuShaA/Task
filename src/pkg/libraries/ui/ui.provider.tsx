@@ -16,7 +16,7 @@ const UiProvider: FC<Readonly<IProps>> = (props) => {
 
   return (
     <HeroUIProvider locale={locale}>
-      <NextThemesProvider attribute='class' forcedTheme='light' defaultTheme='system' disableTransitionOnChange>
+      <NextThemesProvider attribute='class' forcedTheme='light' defaultTheme='light' disableTransitionOnChange>
         {children}
 
         <ToastProvider

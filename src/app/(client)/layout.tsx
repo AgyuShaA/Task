@@ -3,6 +3,7 @@ import '@/config/styles/globals.css'
 import { UiProvider } from '../../pkg/libraries/ui'
 import RestApiProvider from '@/pkg/libraries/rest-api/rest-api.provider'
 import { MixpanelPlrovider } from '@/pkg/integrations/mixpanel/mixpanel'
+import { NextIntlClientProvider } from 'next-intl'
 
 export default function RootLayout({
   children,

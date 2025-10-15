@@ -7,6 +7,20 @@ const config: Config = {
 
   plugins: [
     heroui({
+      themes: {
+        light: {
+          colors: {
+            primary: 'rgb(16, 117, 110)',
+
+            background: '#ffffff',
+            foreground: '#11181C',
+          },
+        },
+        dark: {
+          layout: {},
+          colors: {},
+        },
+      },
       layout: {
         dividerWeight: '1px',
         disabledOpacity: 0.5,

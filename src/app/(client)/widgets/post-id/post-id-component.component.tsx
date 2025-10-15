@@ -16,9 +16,7 @@ export default function PostIdComponent({ id }: PostIdComponentProps) {
 
       <div className='flex items-center justify-center'>
         <Link href='/'>
-          <Button size='sm' variant='primary'>
-            Back to All Posts
-          </Button>
+          <Button variant='primary'>Back to All Posts</Button>
         </Link>
       </div>
     </div>

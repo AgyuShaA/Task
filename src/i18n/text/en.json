@@ -1,0 +1,176 @@
+{
+  "MainComponent": {
+    "wantToKnow": "Want to know your",
+    "iqResult": "IQ result?",
+    "description": "Take our IQ test and discover your path to self-awareness and growth",
+    "startTest": "Start the IQ test now",
+    "howItWorks": "How it works",
+    "userReviews": "Excellent user reviews",
+    "testsTaken": "IQ tests taken today!"
+  },
+
+  "HowItWorks": {
+    "heading": "How it works",
+    "step1": {
+      "title": "Take the test",
+      "description": "Get an unbiased view of yourself"
+    },
+    "step2": {
+      "title": "Get a detailed report",
+      "description": "Discover your strengths and uncover areas for growth"
+    },
+    "step3": {
+      "title": "Start your journey",
+      "description": "Begin improving with expert courses and brain training"
+    }
+  },
+
+  "AvailableTests": {
+    "heading": "Available tests",
+    "description": "Each test reveals a new part of you. Start with IQ, more tests coming soon",
+    "tests": {
+      "iq": {
+        "title": "IQ / Intelligence Test",
+        "duration": "15 minutes",
+        "questions": "25 questions",
+        "buttonText": "Start the IQ test now"
+      },
+      "personality": {
+        "title": "Personality Test",
+        "duration": "20 minutes",
+        "questions": "30 questions",
+        "buttonText": "Personality Test"
+      },
+      "loveStyle": {
+        "title": "Love Style",
+        "duration": "25 minutes",
+        "questions": "40 questions",
+        "buttonText": "Love Style Test"
+      },
+      "career": {
+        "title": "Career",
+        "duration": "10 minutes",
+        "questions": "20 questions",
+        "buttonText": "Coming soon"
+      }
+    }
+  },
+
+  "Community": {
+    "heading": "Community",
+    "descriptionFull": "Follow us on social media to get daily quizzes, exercises, and puzzles to keep your mind sharp",
+    "descriptionShort": "Follow us on social media"
+  },
+
+  "FAQ": {
+    "heading": "Frequently Asked Questions",
+    "item1": {
+      "question": "What if I'm not satisfied with the program?",
+      "answer": "We are confident that you will see the value and benefits of myIQ, but if you are not satisfied or encounter technical issues, you may be eligible for a refund. Please see our <a>Refund Policy</a> for more details."
+    },
+    "item2": {
+      "question": "How do I cancel my subscription?",
+      "answer": "Cancellation is simple and takes only a few minutes. Visit our <a>Help Center</a> and follow the instructions. You will retain access until the end of the current billing period."
+    },
+    "item3": {
+      "question": "How long does the IQ test take?",
+      "answer": "Our IQ test takes up to 20 minutes. Each test must be completed in one session and cannot be paused, as this ensures the most accurate results. Please schedule uninterrupted time before starting any test."
+    },
+    "item4": {
+      "question": "Can I retake the tests?",
+      "answer": "Yes! You can retake tests after completing the recommended learning modules to track your progress and improvement over time."
+    },
+    "item5": {
+      "question": "Can I access myIQ on multiple devices?",
+      "answer": "Yes! Your subscription works on all devices—smartphones, tablets, and computers. Your progress automatically syncs wherever you log in."
+    },
+    "item6": {
+      "question": "Is my data secure?",
+      "answer": "We take your privacy seriously. Your data is securely stored and handled in accordance with all applicable laws. Data is encrypted using bank-level security, and we never share your personal information with third parties. Your payment information is processed according to PCI-DSS industry standards. Learn more in our <a>Privacy Policy</a>."
+    }
+  },
+
+  "Results": { "heading": "Latest results" },
+
+  "Plans": {
+    "heading": "Explore our plans",
+    "description": "Check out our flexible offerings and choose the one that best suits your learning and personal development.",
+    "twoWeek": {
+      "title": "TWO-WEEK SUBSCRIPTION",
+      "price": "₴724.99*",
+      "period": "/2 weeks",
+      "feature1": "7-day trial, then automatically renewed to a two-week plan",
+      "feature2": "Personalized IQ certificate",
+      "feature3": "Comprehensive cognitive analysis",
+      "feature4": "Full access to development tools"
+    },
+    "monthly": {
+      "title": "MONTHLY SUBSCRIPTION",
+      "price": "₴1448.99*",
+      "period": "/month",
+      "feature1": "Maximum savings for long-term growth",
+      "feature2": "Full set of cognitive assessment tools",
+      "feature3": "20+ hours of expert-led courses",
+      "feature4": "Personalized development path"
+    },
+    "startButton": "Start",
+    "footerText": "*Visit our",
+    "footerLink": "pricing page"
+  },
+
+  "SkillsSection": {
+    "heading": "Develop your skills",
+    "description": "Unlock your potential with our comprehensive learning package",
+    "skill1": {
+      "title": "Expert video courses",
+      "item1": "20+ hours of expert learning",
+      "item2": "Easy-to-follow lessons",
+      "item3": "Learn at your own pace",
+      "item4": "Track your progress"
+    },
+    "skill2": {
+      "title": "Brain training games",
+      "item1": "Various exercises to train cognitive abilities",
+      "item2": "Progressive difficulty levels",
+      "item3": "Improve 5 key mental skills: Memory, Logical Thinking, Problem-Solving Mastery, Focus, and Concentration"
+    },
+    "skill3": {
+      "title": "Puzzles",
+      "item1": "150+ puzzles to develop intelligence",
+      "item2": "Smart difficulty progression",
+      "item3": "Master key brain functions: Pattern Recognition, Strategic Thinking, Analytical Reasoning"
+    }
+  },
+
+  "Rewards": {
+    "heading": "What you will get",
+    "reward1": "IQ certification with authentication, verified by cognitive science experts",
+    "reward2": "Deep analysis revealing your full cognitive potential and capabilities",
+    "reward3": "Scientifically calibrated training tools developed by neuroscience specialists",
+    "reward4": "Expertly crafted educational content based on leading cognitive research",
+    "reward5": "Advanced thinking exercises designed by neurobiologists",
+    "reward6": "Additional interactive tasks to develop creativity and logic"
+  },
+  "Header": {
+    "signIn": "Sign In",
+    "startTest": "Start Test"
+  },
+  "Footer": {
+    "customerSupport": "Customer Support",
+    "howToCancel": "How to Cancel",
+    "alwaysAvailable": "24/7/365",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsConditions": "Terms & Conditions",
+    "cookiePolicy": "Cookie Policy",
+    "refundPolicy": "Refund Policy",
+    "aboutUs": "About Us",
+    "help": "Help",
+    "blog": "Blog",
+    "reviews": "Reviews",
+    "pricing": "Pricing",
+    "language": "English",
+    "copyright": "Copyright © 2024-2025",
+    "allRights": "All rights reserved. All trademarks referenced herein are the properties of their respective owners."
+  }
+}

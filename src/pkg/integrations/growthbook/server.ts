@@ -1,4 +1,3 @@
-// /lib/growthbook/server.ts
 import { configureServerSideGrowthBook } from '@/pkg/integrations/growthbook/growthBookServer'
 import { GrowthBook } from '@growthbook/growthbook'
 

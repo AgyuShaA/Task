@@ -1,27 +1,41 @@
 'use client'
 
-import { Button as HeroButton, ButtonProps as HeroButtonProps } from '@heroui/react'
-import clsx from 'clsx'
+import { cn, Button } from '@heroui/react'
+import Link from 'next/link'
 
-type MyButtonVariant = 'primary' | 'secondary'
-
-interface ButtonProps extends Omit<HeroButtonProps, 'variant'> {
-  variant?: MyButtonVariant
+interface CustomButtonProps {
+  href?: string
+  variant?: 'primary' | 'white'
+  children: React.ReactNode
   className?: string
+  onClick?: () => void
 }
 
-export default function Button({ variant = 'primary', className, ...props }: ButtonProps) {
-  const heroVariantMap: Record<MyButtonVariant, HeroButtonProps['variant']> = {
-    primary: 'solid',
-    secondary: 'light',
+const CustomButton = ({ href, variant = 'primary', children, className, onClick }: CustomButtonProps) => {
+  const baseStyles =
+    'text-medium font-normal rounded-small relative z-0 inline-flex h-[42px] min-w-20 items-center justify-center px-4 shadow-sm transition-all'
+
+  const variants = {
+    primary: 'hover:bg-green-custom/90 button-primary hover:text-white',
+    white:
+      'border-2 text-[var(--color-green-custom)] bg-white border-[var(--color-green-custom)]   hover:text-white  hover:bg-[var(--color-green-custom)]/70',
   }
 
-  const variantClass = clsx(
-    variant === 'primary' && ' cursor-pointer bg-blue-600 hover:bg-blue-700 text-white',
-    variant === 'secondary' && ' cursor-pointer  bg-gray-200 hover:bg-gray-300 text-gray-800',
-    'px-4 py-1 rounded',
-    className,
-  )
+  const combinedClass = cn(baseStyles, variants[variant], className)
 
-  return <HeroButton {...props} variant={heroVariantMap[variant]} className={variantClass} />
+  if (href) {
+    return (
+      <Link href={href} className={combinedClass}>
+        {children}
+      </Link>
+    )
+  }
+
+  return (
+    <Button className={combinedClass} onPress={onClick} disableAnimation radius='sm'>
+      {children}
+    </Button>
+  )
 }
+
+export default CustomButton
