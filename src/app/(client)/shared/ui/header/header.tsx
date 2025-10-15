@@ -37,12 +37,17 @@ export const Header = () => {
               {t('startTest')}
             </CustomButton>
           </div>
-
           <div
-            onClick={() => setSidebarOpen(true)}
-            className='flex h-[15px] w-1/4 cursor-pointer items-center justify-end lg:hidden'
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            className='flex h-[20px] w-6 cursor-pointer items-center justify-end overflow-visible lg:hidden'
           >
-            <div className='relative h-[1.5px] w-[16.5px] bg-black before:absolute before:left-0 before:h-[1.5px] before:w-[16.5px] before:translate-y-[-5px] before:rounded-full before:bg-black after:absolute after:left-0 after:h-[1.5px] after:w-[16.5px] after:translate-y-[5px] after:rounded-full after:bg-black' />
+            <div
+              className={`relative h-[1.5px] w-full bg-black transition-all duration-300 before:absolute before:left-0 before:h-[1.5px] before:w-full before:rounded-full before:bg-black before:transition-transform before:duration-300 before:content-[''] after:absolute after:left-0 after:h-[1.5px] after:w-full after:rounded-full after:bg-black after:transition-transform after:duration-300 after:content-[''] ${
+                sidebarOpen
+                  ? 'bg-transparent before:top-0 before:left-0 before:rotate-45 after:top-0 after:left-0 after:-rotate-45'
+                  : 'before:top-[-6px] after:top-[6px]'
+              }`}
+            />
           </div>
         </div>
       </header>
