@@ -10,7 +10,7 @@ interface SidebarProps {
   onClose: Dispatch<SetStateAction<boolean>>
 }
 
-export const Sidebar = ({ open, onClose }: SidebarProps) => {
+export const Sidebar = ({ open }: SidebarProps) => {
   const navItems = [
     { label: 'Як це працює', href: '#' },
     { label: 'Сфери зростання', href: '#' },

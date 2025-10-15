@@ -1,5 +1,5 @@
 import { MyIqModule } from '../../modules/myiq'
-import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { setRequestLocale } from 'next-intl/server'
 
 export const revalidate = 30
 export const dynamic = 'force-static'
@@ -11,7 +11,6 @@ type Props = {
 export default async function Home({ params }: Props) {
   const { locale } = await params // already available, no need for `use()`
   setRequestLocale(locale)
-  const t = await getTranslations()
 
   return (
     <div className='pt-16'>

@@ -4,12 +4,6 @@ import React from 'react'
 import { useTranslations } from 'next-intl'
 import Accepticon from '../../shared/icons/accept-icon'
 
-interface Skill {
-  id: number
-  title: string
-  items: string[]
-}
-
 export const SkillsSection: React.FC = () => {
   const t = useTranslations('SkillsSection') // assumes your JSON namespace is 'SkillsSection'
   const skills = [

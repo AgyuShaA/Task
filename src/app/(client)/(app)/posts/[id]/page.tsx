@@ -2,7 +2,7 @@ import { dehydrate, HydrationBoundary } from '@tanstack/react-query'
 
 import { postQueryOptionsById } from '@/client/entities/api/post'
 import { getQueryClient } from '@/pkg/libraries/rest-api/service'
-import { PostModule } from '../../modules/post'
+import { PostModule } from '@/app/(client)/modules/post'
 
 export const revalidate = 30
 export const dynamic = 'force-static'

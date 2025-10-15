@@ -14,14 +14,9 @@ import VisaIcon from '../../icons/footer/visa-icon'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { routing } from '@/i18n/routing'
-import { useState, useRef, useEffect } from 'react'
-import { NavigateOptions } from 'next/dist/shared/lib/app-router-context.shared-runtime'
+import { useState, useRef } from 'react'
 
-type Props = {
-  locale: string
-}
-
-export const Footer = ({ locale }: Props) => {
+export const Footer = () => {
   const t = useTranslations('Footer')
   const pathname = usePathname()
   const locales = routing.locales

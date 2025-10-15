@@ -30,7 +30,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <div className={`${interFont.className} `}>
           <Header />
           {children}
-          <Footer locale={locale} />
+          <Footer />
         </div>
       </NextIntlClientProvider>
     </>

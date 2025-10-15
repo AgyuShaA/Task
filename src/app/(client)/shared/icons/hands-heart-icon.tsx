@@ -1,4 +1,4 @@
-const HandsHeartIcon = (props: React.SVGProps<SVGSVGElement>) => (
+const HandsHeartIcon = () => (
   <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 38 38' className='h-[38px] w-[38px]'>
     <g strokeLinejoin='round' strokeMiterlimit='10' strokeWidth='1.633' clipPath='url(#relations-hands_svg__a)'>
       <path

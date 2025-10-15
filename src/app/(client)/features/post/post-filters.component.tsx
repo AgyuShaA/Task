@@ -51,7 +51,7 @@ export default function PostFilters() {
 
       <div className='flex flex-wrap gap-2'>
         {sortButtons.map(({ label, order }) => (
-          <Button key={order} size='sm' onPress={() => handleSort(order)} className={buttonClass(order)}>
+          <Button key={order} onPress={() => handleSort(order)} className={buttonClass(order)}>
             {label}
           </Button>
         ))}

@@ -1,10 +1,11 @@
 import { dehydrate, HydrationBoundary } from '@tanstack/react-query'
 import { Suspense } from 'react'
-import { HomeModule } from '../modules/home'
+
 import { postQueryOptions } from '@/client/entities/api/post'
 import { getQueryClient } from '@/pkg/libraries/rest-api/service'
 
 import { getServerGrowthBook } from '@/pkg/integrations/growthbook/server'
+import { HomeModule } from '../../modules/home'
 
 export const revalidate = 30
 export const dynamic = 'force-static'

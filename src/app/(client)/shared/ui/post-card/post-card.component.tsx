@@ -19,9 +19,7 @@ export default function PostCard({ post, showButton = true }: PostCardProps) {
       <p className='text-center text-gray-700'>{post.body}</p>
       {showButton && (
         <Link href={`/${post.id}`}>
-          <Button size='sm' variant='primary'>
-            View Post
-          </Button>
+          <Button variant='primary'>View Post</Button>
         </Link>
       )}
     </Card>
