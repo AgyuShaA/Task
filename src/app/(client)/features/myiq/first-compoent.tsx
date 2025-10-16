@@ -1,6 +1,3 @@
-'use client'
-
-import React from 'react'
 import { useTranslations } from 'next-intl'
 import CustomButton from '../../shared/ui/button'
 import { ArrowRightIcon, GraphIcon, StarIcon } from '../../shared/icons'
@@ -59,7 +56,7 @@ export const FirstComponent = () => {
             <div className='-ml-4 flex flex-col text-sm text-[#2B2D42] md:-ml-8 md:text-base md:leading-6'>
               <div className='flex flex-wrap max-md:flex-col md:items-center md:gap-1'>
                 <p>{t('userReviews')}</p>
-                {/* stars */}
+
                 <div className='relative flex text-gray-300'>
                   {[...Array(5)].map((_, i) => (
                     <div key={i} className='relative' style={{ width: 17, height: 17 }}>

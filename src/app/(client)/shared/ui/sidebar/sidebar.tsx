@@ -42,11 +42,11 @@ export const Sidebar = ({ open }: SidebarProps) => {
           <hr className='h-divider w-full border-none bg-[hsl(var(--heroui-divider)/0.1)]' />
 
           <div className='mt-6 grid gap-4'>
-            <CustomButton className='py-7 !text-lg' variant='white'>
+            <CustomButton className='py-6 !text-lg' variant='white'>
               Увійти
             </CustomButton>
 
-            <CustomButton className='!py-7 !text-lg'> Розпочати тест</CustomButton>
+            <CustomButton className='!py-6 !text-lg'> Розпочати тест</CustomButton>
           </div>
         </motion.div>
       )}

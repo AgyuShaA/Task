@@ -26,9 +26,7 @@ export const HowItWorks = async () => {
     <section id='how-it-works' className='relative w-full pt-[120px] pb-6 md:pt-[140px] md:pb-10 lg:pt-[174px]'>
       <div className='absolute inset-0 z-[-1] h-full w-full bg-gradient-to-b from-white via-[#EBF4FF] to-white' />
 
-      <h3 className='text-dark-custom mb-6 text-center text-[1.7rem] font-semibold md:mb-8 md:text-4xl md:text-[2.7rem]'>
-        {t('heading')}
-      </h3>
+      <h3 className='text-dark-custom mb-6 text-center text-3xl font-semibold md:mb-8 md:text-4xl'>{t('heading')}</h3>
 
       <div className='flex w-full gap-3 max-md:flex-col md:gap-6'>
         {steps.map((step, idx) => (

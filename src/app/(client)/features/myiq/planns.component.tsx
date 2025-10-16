@@ -1,5 +1,3 @@
-'use client'
-
 import { useTranslations } from 'next-intl'
 import Accepticon from '../../shared/icons/accept-icon'
 import CustomButton from '../../shared/ui/button'
@@ -37,7 +35,7 @@ export const Planns = () => {
           {plans.map((plan, idx) => (
             <div
               key={idx}
-              className='flex h-auto max-w-[362px] flex-col overflow-hidden border border-gray-100 p-3 shadow-2xl outline-transparent transition-transform duration-300 outline-solid hover:scale-105 hover:shadow-lg data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-offset-2 motion-reduce:transition-none'
+              className='flex h-auto max-w-[362px] flex-col overflow-hidden border border-gray-100 p-3 shadow-2xl outline-transparent transition-transform duration-300 outline-solid hover:scale-105 hover:shadow-lg'
               tabIndex={-1}
             >
               <div className='color-inherit rounded-t-large z-10 flex w-full shrink-0 flex-col items-start justify-start gap-2 p-3 pb-6 subpixel-antialiased'>

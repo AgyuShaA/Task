@@ -1,6 +1,3 @@
-'use client'
-
-import React from 'react'
 import { useTranslations } from 'next-intl'
 import Accepticon from '../../shared/icons/accept-icon'
 
@@ -23,9 +20,7 @@ export const SkillsSection: React.FC = () => {
 
   return (
     <section className='py-6 md:py-10'>
-      <h3 className='text-dark-custom order-4 mb-4 text-center text-[2.7rem] font-semibold md:text-4xl'>
-        {t('heading')}
-      </h3>
+      <h3 className='text-dark-custom order-4 mb-4 text-center text-3xl font-semibold md:text-4xl'>{t('heading')}</h3>
       <p className='mb-4 text-center text-base md:pt-0.5 md:text-[18px]'>{t('description')}</p>
 
       <div className='flex gap-3 pt-5 max-lg:flex-col md:gap-6 md:pt-8'>

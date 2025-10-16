@@ -81,7 +81,7 @@ export const FAQSection = () => {
           <span className='inline-block'>{t('heading')}</span>
         </h2>
 
-        <div className='flex w-full flex-col gap-2 !px-0 px-2 pt-4 max-md:!gap-0'>
+        <div className='flex w-full flex-col gap-2 px-2 pt-4 max-md:!gap-0'>
           {faqItems.map((item, index) => (
             <div
               key={index}

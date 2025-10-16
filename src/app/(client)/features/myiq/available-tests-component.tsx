@@ -29,7 +29,7 @@ export const AvailableTests: React.FC = () => {
     <section className='relative mx-auto flex max-w-7xl flex-col items-center px-4 py-12'>
       <div className='absolute top-0 -left-1/2 -z-0 h-full w-[200vw] bg-[#F6FBFF]'></div>
 
-      <h2 className='z-1 mb-4 text-2xl font-bold text-[#2B2D42] md:text-4xl'>{t('heading')}</h2>
+      <h2 className='z-1 mb-4 text-3xl font-bold text-[#2B2D42] md:text-4xl'>{t('heading')}</h2>
       <h3 className='text-md z-1 pb-4'>{t('description')}</h3>
 
       <div className='z-2 grid w-full gap-6 pt-8 sm:grid-cols-1 sm:grid-rows-4 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-4 lg:grid-rows-1'>

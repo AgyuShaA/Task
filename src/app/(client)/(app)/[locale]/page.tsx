@@ -9,7 +9,7 @@ type Props = {
 }
 
 export default async function Home({ params }: Props) {
-  const { locale } = await params // already available, no need for `use()`
+  const { locale } = await params
   setRequestLocale(locale)
 
   return (
