@@ -4,7 +4,7 @@ import { interFont } from '@/config/fonts'
 import { Header } from '../../shared/ui/header/header'
 import { Footer } from '../../shared/ui/footer/footer'
 import { hasLocale, NextIntlClientProvider } from 'next-intl'
-import { routing } from '@/i18n/routing'
+import { routing } from '@/pkg/libraries/locale/routing'
 import { notFound } from 'next/navigation'
 import { setRequestLocale } from 'next-intl/server'
 

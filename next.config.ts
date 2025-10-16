@@ -5,7 +5,7 @@ const nextConfig = {
   outputFileTracingRoot: __dirname,
 }
 
-const nextConfigWithIntl = createNextIntlPlugin()(nextConfig)
+const nextConfigWithIntl = createNextIntlPlugin({ requestConfig: './src/pkg/libraries/locale/request.ts' })(nextConfig)
 
 module.exports = withSentryConfig(nextConfigWithIntl, {
   org: 'ruby-labs-ov',

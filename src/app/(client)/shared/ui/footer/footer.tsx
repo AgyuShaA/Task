@@ -13,7 +13,7 @@ import ApplePayIcon from '../../icons/footer/apple-pay-icon'
 import VisaIcon from '../../icons/footer/visa-icon'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { routing } from '@/i18n/routing'
+import { routing } from '@/pkg/libraries/locale/routing'
 import { useState, useRef } from 'react'
 
 export const Footer = () => {
