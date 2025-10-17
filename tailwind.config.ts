@@ -11,7 +11,6 @@ const config: Config = {
         light: {
           colors: {
             primary: 'rgb(16, 117, 110)',
-
             background: '#ffffff',
             foreground: '#11181C',
           },
