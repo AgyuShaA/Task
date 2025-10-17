@@ -2,7 +2,7 @@ import { AcceptIcon } from '@/app/(client)/shared/icons'
 import { useTranslations } from 'next-intl'
 
 const SkillsBlockComponent: React.FC = () => {
-  const t = useTranslations('SkillsSection') // assumes your JSON namespace is 'SkillsSection'
+  const t = useTranslations('SkillsSection')
   const skills = [
     {
       title: t('skill1.title'),

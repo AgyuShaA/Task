@@ -4,7 +4,7 @@ import CustomButton from '../../../shared/ui/button'
 import Link from 'next/link'
 
 const PlannsBlockComponent = () => {
-  const t = useTranslations('Plans') // translations namespace
+  const t = useTranslations('Plans')
 
   const plans = [
     {

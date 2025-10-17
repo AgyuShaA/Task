@@ -60,8 +60,8 @@ export const LastResultsBlockComponent = () => {
     const interval = setInterval(() => {
       setResults((prev) => {
         const newResults = [...prev]
-        const firstTwo = newResults.splice(0, 2) // remove top 2
-        newResults.push(...firstTwo) // add them to bottom
+        const firstTwo = newResults.splice(0, 2)
+        newResults.push(...firstTwo)
         return newResults
       })
     }, 2000)
@@ -79,7 +79,7 @@ export const LastResultsBlockComponent = () => {
               key={idx}
               {...r}
               bgColor={Math.floor(idx / 2) % 2 === 1 ? 'lg:bg-[#F6FBFF]' : undefined}
-              hideOnMobile={false} // show all 8 on desktop
+              hideOnMobile={false}
             />
           ))}
         </div>
@@ -90,7 +90,7 @@ export const LastResultsBlockComponent = () => {
               key={idx}
               {...r}
               bgColor={Math.floor(idx / 2) % 2 === 1 ? 'lg:bg-[#F6FBFF]' : undefined}
-              hideOnMobile={false} // show all 8 on desktop
+              hideOnMobile={false}
             />
           ))}
         </div>

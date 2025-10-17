@@ -9,7 +9,7 @@ import CustomButton from '../button'
 import { Sidebar } from '../sidebar/sidebar'
 
 export const Header = () => {
-  const t = useTranslations('Header') // <- namespace for translations
+  const t = useTranslations('Header')
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
