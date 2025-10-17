@@ -159,12 +159,12 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className='mx-auto flex w-full max-w-7xl flex-col justify-between md:flex-row'>
+        <div className='mx-auto w-full max-w-7xl'>
           <div className='flex flex-col gap-4 md:items-end'>
             <div className='relative flex flex-col gap-4 md:items-end'>
               <button
                 onClick={() => setOpen(!open)}
-                className='group text-small relative inline-flex h-10 cursor-pointer items-center gap-2 rounded-md border-2 bg-transparent px-4 font-normal text-white outline-none'
+                className='text-small relative inline-flex h-10 cursor-pointer items-center gap-2 rounded-md border-2 bg-transparent px-4 font-normal text-white outline-none'
               >
                 <span className='max-w-full truncate'>{t('language')}</span>
                 <span className='ml-2 transition-transform duration-200'>{open ? '▲' : '▼'}</span>
@@ -207,7 +207,7 @@ export const Footer = () => {
                 </p>
               </div>
 
-              <div className='flex grow gap-1.5'>
+              <div className='justigy-end flex gap-1.5'>
                 <div className='flex h-8 w-[46px] items-center justify-center rounded-lg bg-white'>
                   <MasterCardIcon />
                 </div>
