@@ -20,7 +20,6 @@ export const Header = () => {
           style={{ maxWidth: 1280 }}
           className='mx-auto flex h-16 w-full items-center justify-between max-[1320px]:px-6 max-md:px-4'
         >
-          {/* --- Logo --- */}
           <Link href='/' aria-label='Logo' className='pointer-events-none [&_svg]:h-[31px] [&_svg]:w-[108px]'>
             <div>
               <HeaderIcon />

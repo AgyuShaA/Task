@@ -32,7 +32,6 @@ export const Footer = () => {
     <footer className='z-10 mt-auto w-full'>
       <div className='flex flex-col bg-[#001B36] p-6 max-[1320px]:px-6 max-md:px-4 md:gap-5'>
         <div className='mx-auto flex w-full max-w-7xl flex-col justify-between md:flex-row'>
-          {/* Logo and Socials */}
           <div className='flex flex-col justify-start gap-6'>
             <Link className='w-fit flex-shrink-0' aria-label='Logo' href='/'>
               <MainWhitePcIcon />
@@ -77,7 +76,6 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Customer Support and Links */}
           <div className='flex flex-col md:flex-row md:gap-5'>
             <div className='text-white max-md:mt-6 md:mr-10 lg:mr-20'>
               <p className='mb-4 flex items-center gap-2 text-lg font-semibold'>{t('customerSupport')}</p>
@@ -97,7 +95,6 @@ export const Footer = () => {
             </div>
 
             <ul className='mb-6 flex flex-col gap-4 max-md:mt-4 md:flex-row md:gap-20 lg:mb-12'>
-              {/* Legal */}
               <li>
                 <p className='mb-4 text-lg font-semibold text-white'>{t('legal')}</p>
                 <ul className='flex flex-col gap-2'>
@@ -124,7 +121,6 @@ export const Footer = () => {
                 </ul>
               </li>
 
-              {/* About Us */}
               <li>
                 <p className='mb-4 text-lg font-semibold text-white'>{t('aboutUs')}</p>
                 <ul className='flex flex-col gap-2'>
