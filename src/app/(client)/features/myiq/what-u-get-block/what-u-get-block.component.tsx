@@ -2,9 +2,9 @@
 
 import React, { useRef, useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
-import WinnerBlueIcon from '../../shared/icons/winner-blue-icon'
+import WinnerBlueIcon from '../../../shared/icons/winner-blue-icon'
 
-export const RewardsSlider: React.FC = () => {
+const WhatUGetBlockComponent: React.FC = () => {
   const t = useTranslations('Rewards')
   const containerRef = useRef<HTMLDivElement>(null)
   const [scrollState, setScrollState] = useState({ left: false, right: false })
@@ -62,3 +62,5 @@ export const RewardsSlider: React.FC = () => {
     </section>
   )
 }
+
+export default WhatUGetBlockComponent

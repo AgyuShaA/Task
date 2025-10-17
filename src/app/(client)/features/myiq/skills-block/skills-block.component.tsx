@@ -1,7 +1,7 @@
+import { AcceptIcon } from '@/app/(client)/shared/icons'
 import { useTranslations } from 'next-intl'
-import Accepticon from '../../shared/icons/accept-icon'
 
-export const SkillsSection: React.FC = () => {
+const SkillsBlockComponent: React.FC = () => {
   const t = useTranslations('SkillsSection') // assumes your JSON namespace is 'SkillsSection'
   const skills = [
     {
@@ -42,7 +42,7 @@ export const SkillsSection: React.FC = () => {
               {skill.items.map((item, i) => (
                 <li key={i} className='flex items-start gap-1.5'>
                   <div className='p-1'>
-                    <Accepticon />
+                    <AcceptIcon />
                   </div>
                   <p className='text-start text-sm'>{item}</p>
                 </li>
@@ -54,3 +54,5 @@ export const SkillsSection: React.FC = () => {
     </section>
   )
 }
+
+export default SkillsBlockComponent

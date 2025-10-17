@@ -1,7 +1,9 @@
 'use client'
+
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { useState } from 'react'
+
 const Chevron = ({ open }: { open: boolean }) => (
   <svg
     aria-hidden='true'
@@ -22,7 +24,7 @@ interface FAQItem {
   answer: React.ReactNode
 }
 
-export const FAQSection = () => {
+const FaqBlockComponent = () => {
   const t = useTranslations('FAQ')
 
   const faqItems: FAQItem[] = [
@@ -118,3 +120,5 @@ export const FAQSection = () => {
     </div>
   )
 }
+
+export default FaqBlockComponent

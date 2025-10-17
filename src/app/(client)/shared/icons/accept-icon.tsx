@@ -1,4 +1,4 @@
-const Accepticon = () => (
+const AcceptIcon = () => (
   <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 14 10' className='text-primary shrink-0' width='16'>
     <path
       fill='currentColor'
@@ -9,4 +9,4 @@ const Accepticon = () => (
   </svg>
 )
 
-export default Accepticon
+export default AcceptIcon

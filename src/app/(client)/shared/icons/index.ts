@@ -22,6 +22,6 @@ export { default as SmallClockIcon } from './smapp-clock-icon'
 
 export { default as PassedIcon } from './passed-icon'
 
-export { default as Acception } from './accept-icon'
+export { default as AcceptIcon } from './accept-icon'
 
 export { default as StarIcon } from './star-icon'

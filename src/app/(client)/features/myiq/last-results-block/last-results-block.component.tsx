@@ -1,5 +1,6 @@
 'use client'
 
+import { Card, CardBody } from '@heroui/react'
 import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
 import Flag from 'react-world-flags'
@@ -13,22 +14,23 @@ interface ResultCardProps {
 }
 
 const ResultCard = ({ countryCode, name, iq, bgColor, hideOnMobile }: ResultCardProps) => (
-  <div
+  <Card
+    shadow='sm'
     className={`basis-full rounded-[18px] px-6 py-[23px] lg:basis-[48.5%] lg:py-[28px] ${
-      bgColor ? bgColor : ''
+      bgColor ?? ''
     } ${hideOnMobile ? 'max-lg:hidden' : ''}`}
-    style={{ opacity: 1, transition: 'all 0.5s ease-in-out' }}
+    style={{ transition: 'all 0.5s ease-in-out' }}
   >
-    <div className='flex items-center gap-4 px-3 py-4 sm:py-0 sm:pl-3'>
-      <div className='mt-0 h-5 w-[30px] lg:h-8 lg:w-[45px]'>
+    <CardBody className='flex items-center gap-4 px-3 py-4 sm:py-0 sm:pl-3'>
+      <div className='h-5 w-[30px] lg:h-8 lg:w-[45px]'>
         <Flag code={countryCode} className='h-full w-full rounded object-cover' />
       </div>
       <p className='text-base font-medium md:text-lg'>{name}</p>
       <div className='rounded-small ml-auto px-2 py-1 text-center text-base font-semibold text-[#006FEE] md:text-[20px]'>
         IQ&nbsp;{iq}
       </div>
-    </div>
-  </div>
+    </CardBody>
+  </Card>
 )
 
 const mockResults = [
@@ -50,7 +52,7 @@ const mockResults = [
   { countryCode: 'CH', name: 'Müller Anna', iq: 104 },
 ]
 
-export const LatestResults = () => {
+export const LastResultsBlockComponent = () => {
   const [results, setResults] = useState(mockResults.slice(0, 16))
   const t = useTranslations('Results')
 
@@ -96,3 +98,5 @@ export const LatestResults = () => {
     </section>
   )
 }
+
+export default LastResultsBlockComponent

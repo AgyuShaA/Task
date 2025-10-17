@@ -1,7 +1,7 @@
-import { FileIcon, RocketIcon, TestsIcon } from '../../shared/icons'
+import { FileIcon, RocketIcon, TestsIcon } from '../../../shared/icons'
 import { getTranslations } from 'next-intl/server'
 
-export const HowItWorks = async () => {
+const HowWorkBlockComponent = async () => {
   const t = await getTranslations('HowItWorks') // namespace for translations
 
   const steps = [
@@ -44,3 +44,5 @@ export const HowItWorks = async () => {
     </section>
   )
 }
+
+export default HowWorkBlockComponent

@@ -1,9 +1,9 @@
 import { useTranslations } from 'next-intl'
-import Accepticon from '../../shared/icons/accept-icon'
-import CustomButton from '../../shared/ui/button'
+import Accepticon from '../../../shared/icons/accept-icon'
+import CustomButton from '../../../shared/ui/button'
 import Link from 'next/link'
 
-export const Planns = () => {
+const PlannsBlockComponent = () => {
   const t = useTranslations('Plans') // translations namespace
 
   const plans = [
@@ -77,3 +77,5 @@ export const Planns = () => {
     </section>
   )
 }
+
+export default PlannsBlockComponent

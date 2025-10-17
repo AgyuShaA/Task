@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server'
-import { FacebookIcon, InstageramIcon, TwitterIcon } from '../../shared/icons'
+import { FacebookIcon, InstageramIcon, TwitterIcon } from '../../../shared/icons'
 
-export const Community = async () => {
+const CommunityBlockComponent = async () => {
   const t = await getTranslations('Community')
 
   return (
@@ -58,3 +58,5 @@ export const Community = async () => {
     </section>
   )
 }
+
+export default CommunityBlockComponent

@@ -1,9 +1,9 @@
 import { useTranslations } from 'next-intl'
-import CustomButton from '../../shared/ui/button'
-import { ArrowRightIcon, GraphIcon, StarIcon } from '../../shared/icons'
+import CustomButton from '../../../shared/ui/button'
+import { ArrowRightIcon, GraphIcon, StarIcon } from '../../../shared/icons'
 import Image from 'next/image'
 
-export const FirstComponent = () => {
+const FirstBlockComponent = () => {
   const t = useTranslations('MainComponent')
 
   return (
@@ -60,7 +60,6 @@ export const FirstComponent = () => {
                 <div className='relative flex text-gray-300'>
                   {[...Array(5)].map((_, i) => (
                     <div key={i} className='relative' style={{ width: 17, height: 17 }}>
-                      <StarIcon />
                       <div
                         className='absolute top-0 overflow-hidden text-[#f7b635]'
                         style={{ width: i === 4 ? '70%' : '100%' }}
@@ -96,3 +95,5 @@ export const FirstComponent = () => {
     </section>
   )
 }
+
+export default FirstBlockComponent

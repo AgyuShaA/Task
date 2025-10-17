@@ -1,6 +1,6 @@
 'use client'
 
-import CustomButton from '../../shared/ui/button'
+import CustomButton from '../../../shared/ui/button'
 import {
   ArrowRightIcon,
   BrainIcon,
@@ -9,11 +9,11 @@ import {
   LampIcon,
   PassedIcon,
   SmallClockIcon,
-} from '../../shared/icons'
+} from '../../../shared/icons'
 
 import { useMessages, useTranslations } from 'next-intl'
 
-export const AvailableTests: React.FC = () => {
+const TestsBlockComponent: React.FC = () => {
   const t = useTranslations('AvailableTests')
 
   const messages = useMessages()
@@ -63,3 +63,5 @@ export const AvailableTests: React.FC = () => {
     </section>
   )
 }
+
+export default TestsBlockComponent
