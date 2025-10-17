@@ -16,7 +16,7 @@ export default async function Home() {
 
   const gb = await getServerGrowthBook()
   const featureEnabled = gb.isOn('my-feature')
-  console.log('featureEnabled', featureEnabled) // rue
+  console.log('featureEnabled', featureEnabled) // true
 
   const dehydratedState = dehydrate(queryClient)
 
