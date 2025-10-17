@@ -12,7 +12,7 @@ import HowWorkBlockComponent from '../../features/myiq/how-works-block/how-works
 
 export default function MyIqComponent() {
   return (
-    <div>
+    <>
       <FirstBlockComponent />
       <HowWorkBlockComponent />
       <TestsBlockComponent />
@@ -20,8 +20,8 @@ export default function MyIqComponent() {
       <WhatUGetBlockComponent />
       <CommunityBlockComponent />
       <PlannsBlockComponent />
-      <LastResultsBlockComponent />
       <FaqBlockComponent />
-    </div>
+      <LastResultsBlockComponent />
+    </>
   )
 }

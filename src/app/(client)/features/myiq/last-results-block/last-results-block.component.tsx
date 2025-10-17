@@ -15,13 +15,13 @@ interface ResultCardProps {
 
 const ResultCard = ({ countryCode, name, iq, bgColor, hideOnMobile }: ResultCardProps) => (
   <Card
-    shadow='sm'
+    shadow='none'
     className={`basis-full rounded-[18px] px-6 py-[23px] lg:basis-[48.5%] lg:py-[28px] ${
       bgColor ?? ''
     } ${hideOnMobile ? 'max-lg:hidden' : ''}`}
     style={{ transition: 'all 0.5s ease-in-out' }}
   >
-    <CardBody className='flex items-center gap-4 px-3 py-4 sm:py-0 sm:pl-3'>
+    <CardBody className='flex flex-row items-center gap-4 px-3 py-4 sm:py-0 sm:pl-3'>
       <div className='h-5 w-[30px] lg:h-8 lg:w-[45px]'>
         <Flag code={countryCode} className='h-full w-full rounded object-cover' />
       </div>
