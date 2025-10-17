@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl'
-import Accepticon from '../../../shared/icons/accept-icon'
+import Accepticon from '../../../shared/icons/accept.icon'
 import CustomButton from '../../../shared/ui/button'
 import Link from 'next/link'
 

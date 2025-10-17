@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 
 import { HeaderIcon } from '../../icons'
-import CloudIcon from '../../icons/cloud-icon'
+import CloudIcon from '../../icons/cloud.icon'
 import CustomButton from '../button'
 import { Sidebar } from '../sidebar/sidebar'
 

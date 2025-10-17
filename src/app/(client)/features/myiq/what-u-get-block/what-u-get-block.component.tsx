@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
-import WinnerBlueIcon from '../../../shared/icons/winner-blue-icon'
+import WinnerBlueIcon from '../../../shared/icons/winner-blue.icon'
 
 const WhatUGetBlockComponent: React.FC = () => {
   const t = useTranslations('Rewards')
